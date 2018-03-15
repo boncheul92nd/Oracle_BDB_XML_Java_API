@@ -1,0 +1,42 @@
+package basic;
+
+import com.sleepycat.dbxml.XmlException;
+import com.sleepycat.dbxml.XmlManager;
+import com.sleepycat.dbxml.XmlContainer;
+import com.sleepycat.dbxml.XmlDocument;
+import com.sleepycat.dbxml.XmlUpdateContext;
+
+/**
+ * Created by BON-CHEUL on 2018-03-12.
+ *
+ * HelloWorld is the simplest possible Berkeley DB XML program
+ * that does something.
+ * This program demonstrates initialization, container creation,
+ * document insertion and document retrieval by name.
+ * <p>
+ * To run the example:
+ * <pre>
+ * java basic.HelloWorld
+ * </pre>
+ */
+
+public class HelloWorld {
+
+    // This function is used to ensure that databases are
+    // properly closed, even on exceptions
+    private static void cleanup(XmlManager mgr, XmlContainer cont) {
+        try {
+            if (cont != null)
+                cont.delete();
+            if (mgr != null)
+                mgr.delete();
+        } catch (Exception e) {
+            // ignore exception in cleanup
+        }
+    }
+
+    public static void main(String[] args) throws Throwable{
+        // An empty string means an in-memory container, which
+        // will not be persisted.
+    }
+}
