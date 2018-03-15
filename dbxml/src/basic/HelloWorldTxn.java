@@ -78,7 +78,7 @@ public class HelloWorldTxn {
 
         return new Environment(f, config);
     }
-/*
+
     public static void main(String[] args) throws Throwable{
 
         // Am empty string means an in-memory container, which
@@ -147,5 +147,4 @@ public class HelloWorldTxn {
             cleanup(env, mgr, cont);
         }
     }
-    */
 }

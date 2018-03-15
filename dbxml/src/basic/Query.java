@@ -18,8 +18,6 @@ package basic;
 import com.sleepycat.dbxml.XmlException;
 import com.sleepycat.dbxml.XmlManager;
 import com.sleepycat.dbxml.XmlContainer;
-import com.sleepycat.dbxml.XmlDocument;
-import com.sleepycat.dbxml.XmlUpdateContext;
 import com.sleepycat.dbxml.XmlQueryExpression;
 import com.sleepycat.dbxml.XmlResults;
 import com.sleepycat.dbxml.XmlValue;
@@ -44,13 +42,13 @@ public class Query {
 
         // This program uses a named container, which will apear
         // on disk
-        String containerName = "people.dbxml";
+        String containerName = "people01.dbxml";
         String content = "<people><person><name>joe</name></person><person><name>mary</name></person></people>";
-        String docName = "people";
+        String docName = "people01";
 
         // Note that the query uses a variable, which must be set
         // in the query context
-        String queryString = "collection('people.dbxml')/people/person[name=$name]";
+        String queryString = "collection('people01.dbxml')/people/person[name=$name]";
 
         // declare these here for cleanup
         XmlManager mgr = null;
@@ -97,7 +95,7 @@ public class Query {
             res.delete();
             expr.delete();
         } catch (XmlException xe) {
-            System.err.println("XmlException during helloWorld: " + xe.getMessage());
+            System.err.println("XmlException during Query: " + xe.getMessage());
             throw xe;
         } finally {
             cleanup(mgr, cont);

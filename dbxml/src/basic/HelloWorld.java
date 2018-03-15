@@ -33,7 +33,7 @@ public class HelloWorld {
             // ignore exception in cleanup
         }
     }
-/*
+
     public static void main(String[] args) throws Throwable{
         // An empty string means an in-memory container, which
         // will not be persisted.
@@ -63,5 +63,5 @@ public class HelloWorld {
             cleanup(mgr, cont);
         }
     }
-*/
+
 }
