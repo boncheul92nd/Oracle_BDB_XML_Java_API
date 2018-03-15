@@ -94,5 +94,59 @@ public class HelloWorldTxn {
             environmentDir = args[1];
         } else if(args.length != 0)
             usage();
+
+        XmlManager mgr = null;
+        XmlContainer cont = null;
+        Environment env = null;
+
+        try {
+
+            // Create and open a Berkeley DB Transactional Environment.
+            env = createEnvironment(environmentDir);
+
+            // All BDB XML programs require an XmlManager instance
+            // Create it from the DB Environment, but do not adopt the
+            // Environment
+            XmlManagerConfig mconfig = new XmlManagerConfig();
+            mconfig.setAllowExternalAccess(true);
+            mgr = new XmlManager(env, mconfig);
+
+            // Create a container that is transactional. Specify
+            // that it is aslo a Node Storage container, with nodes
+            // indexed
+            XmlContainerConfig cconfig = new XmlContainerConfig();
+            cconfig.setContainerType(XmlContainer.NodeContainer);
+            cconfig.setIndexNodes(XmlContainerConfig.On);
+            cconfig.setTransactional(true);
+            cont = mgr.createContainer(containerName, cconfig);
+
+            // Perform the putDocument in a transaction, created
+            // from the XmlManager
+            XmlTransaction txn = mgr.createTransaction();
+
+            cont.putDocument(txn, docName, content);
+
+            // commit the Transaction
+            txn.commit();
+
+            // Now, get the document
+            txn = mgr.createTransaction();
+            XmlDocument doc = cont.getDocument(txn, docName);
+            String name = doc.getName();
+            String docContent = doc.getContentAsString();
+
+            // print it
+            System.out.println("Document name: " + name + "\nContent: " + docContent);
+        } catch (XmlException xe) {
+            System.err.println("XmlException during HelloWorldTxn: " + xe.getMessage());
+            throw xe;
+        } catch (DatabaseException de) {
+            System.err.println("DatabaseException during HelloWorldTxn: " + de.getMessage());
+            throw de;
+        }
+
+        finally {
+            cleanup(env, mgr, cont);
+        }
     }
 }
