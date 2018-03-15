@@ -2,6 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2df3d2a-9b66-4945-9970-7663ce08ed7e" name="Default" comment="">
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environment/__db.002" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environment/__db.003" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/dbxml/basic/Query.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/out/production/dbxml/basic/QueryTxn.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/container/people01.dbxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/container/people02.dbxml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environment/__db.001" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/environment/log.0000000001" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/basic/HelloWorld.class" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/basic/HelloWorldTxn.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -677,12 +685,12 @@
       <workItem from="1520927421682" duration="1595000" />
       <workItem from="1521087855166" duration="351000" />
       <workItem from="1521088316010" duration="10257000" />
-      <workItem from="1521101711149" duration="2370000" />
+      <workItem from="1521101711149" duration="2385000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="16998000" />
+    <option name="totallyTimeSpent" value="17013000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
