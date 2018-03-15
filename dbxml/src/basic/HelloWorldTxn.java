@@ -32,8 +32,6 @@ import com.sleepycat.dbxml.XmlManagerConfig;
 import com.sleepycat.dbxml.XmlContainer;
 import com.sleepycat.dbxml.XmlContainerConfig;
 import com.sleepycat.dbxml.XmlDocument;
-import com.sleepycat.dbxml.XmlUpdateContext;
-import com.sleepycat.dbxml.XmlQueryContext;
 
 import com.sleepycat.dbxml.XmlTransaction;
 import com.sleepycat.db.Environment;
