@@ -60,6 +60,8 @@ public class HelloWorld {
 
         } catch (XmlException xe) {
             System.err.println("XmlException during HelloWorld: " + xe.getMessage());
+        } finally {
+            cleanup(mgr, cont);
         }
     }
 }
