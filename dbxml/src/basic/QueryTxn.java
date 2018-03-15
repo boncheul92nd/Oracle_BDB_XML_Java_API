@@ -36,7 +36,7 @@ import com.sleepycat.db.DatabaseException;
 public class QueryTxn {
 
     static void usage() {
-        System.err.println("Usage: java dbxml.basic.queryTxn [-h environmentDirectory]");
+        System.err.println("Usage: java basic.queryTxn [-h environmentDirectory]");
         System.exit(-1);
     }
 
