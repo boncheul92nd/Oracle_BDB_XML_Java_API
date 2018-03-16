@@ -9,7 +9,7 @@ import com.sleepycat.dbxml.*;
 import com.sleepycat.db.*;
 import dbxml.gettingStarted.*;
 
-public class retreiveDB {
+public class retrieveDB {
 
     private static String theContainer = "namespaceExampleData.dbxml";
     private static String theDB = "testBerkeleyDB";
@@ -23,7 +23,7 @@ public class retreiveDB {
         usageMessage += "이 프로그램을 실행할 때 exampleLoadContainer에게 예제 데이터를 배치할 위치를 지정한 디렉터리를 확인하시오.\n";
         usageMessage += "\t-h <dbenv directory>\n";
         usageMessage += "For example:\n";
-        usageMessage += "\tjava retreiveDB -h examplesEnvironment\n";
+        usageMessage += "\tjava retrieveDB -h examplesEnvironment\n";
 
         System.out.println(usageMessage);
         System.exit(-1);
