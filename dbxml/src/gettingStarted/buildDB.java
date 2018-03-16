@@ -5,11 +5,9 @@ package gettingStarted;
  */
 
 import java.io.*;
-
 import com.sleepycat.dbxml.*;
 import com.sleepycat.db.*;
-import dbxml.gettingStarted.myDb;
-import dbxml.gettingStarted.myDbEnv;
+import dbxml.gettingStarted.*;
 
 public class buildDB {
 
@@ -82,10 +80,61 @@ public class buildDB {
             Transaction dbTxn = env.getEnvironment().beginTransaction(null, null);
             txn = theMgr.createTransaction(dbTxn);
 
-        } catch() {
+            XmlQueryContext resultsContext = theMgr.createQueryContext();
+
+            String theQuery =
+                    "distinct-values(collection('namespaceExampleData.dbxml')/vendor/salesrep/name)";
+
+            // XmlManager environment 에 대해 쿼리 수행
+            XmlResults results = theMgr.query(txn, theQuery, resultsContext);
+
+            // 도큐먼트 조회 결과 세트에서 값을 추출
+            XmlValue value = results.next();
+
+            while(value != null) {
+                String theSalesRepkey = value.asString();
+                System.out.println("key 에 대한 데이터 입력 : " + theSalesRepkey);
+
+                // 이것은 우리가 데이터베이스에 넣고 있는 데이터이다.
+                // 실세계의 예제에서는 salesreps의 jpeg 이미지, 공개 키 또는 XML 문서 스키마에 맞지 않는
+                // 다른 정보 비트와 같은 BLOB 이 포함된다. 이 경우 데이터를 검색할 때 무슨일이 일어나는지
+                // 알 수 있도록 설명 문자열을 넣을 것이다.
+                String theSalesRepData =
+                        "This is the data stored in the database for " +
+                        theSalesRepkey + ".";
+
+                DatabaseEntry theKey =
+                        new DatabaseEntry(theSalesRepkey.getBytes());
+                DatabaseEntry theData =
+                        new DatabaseEntry(theSalesRepData.getBytes());
+
+                // 마지막으로 Berkeley DB 에 실제 데이터를 쓴다.
+                openedDatabase.getDatabase();
+                putNoOverwrite(txn.getTransaction(), theKey, theData);
+                value = results.next();
+            }
+            results.delete();
+
+            // 이로 인해 쓰기가 영구적으로 이루어진다
+            txn.commit();
+
+        } catch(Exception e) {
+
+            System.err.println(theContainer + "에 대한 쿼리 수행중 오류 발생");
+            System.err.println("\t메시지: " + e.getMessage());
+
+            // 오류가 발생하면 작업을 중단하고 데이터베이스는 이 작업을 시작한 시점과
+            // 동일한 상태로 남겨둔다.
+            if(txn != null) {
+                txn.abort();
+            }
+            throw e;
 
         } finally {
-
+            if(openedDatabase != null) {
+                openedDatabase.cleanup();
+            }
+            cleanup(env, openedContainer);
         }
     }
 }
