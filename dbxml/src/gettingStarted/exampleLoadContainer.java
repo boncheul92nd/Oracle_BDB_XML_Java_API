@@ -11,8 +11,6 @@ import com.sleepycat.db.*;
 import com.sleepycat.dbxml.*;
 import dbxml.gettingStarted.mdConst;
 
-import javax.swing.text.html.HTMLDocument;
-
 public class exampleLoadContainer {
 
     private static void usage() {
