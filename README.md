@@ -13,13 +13,9 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 ![help](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help.PNG)
 
 |명령어    |설명     |
-
 |------------|:----------|
-
 |`#`|코멘트, 아무것도 하지 않는다.|
-
 |`abort`|현재 트랜잭션을 중단한다.|
-
 |`addAlias`|기본 컨테이너에 별칭 추가|
 |`addIndex`|기본 컨테이너에 인덱스 추가|
 |`commit`|현재 트랜잭션을 커밋하고 새 트랜잭션을 시작|
