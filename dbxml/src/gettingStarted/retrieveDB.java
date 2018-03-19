@@ -29,8 +29,8 @@ public class retrieveDB {
         System.exit(-1);
     }
 
-    // Utility function to clean up objects, exceptions or not,
-    // containers and environments must be closed.
+    // 객체를 정리하는 유틸리티 함수. 컨테이너와 환경파일은
+    // 닫혀야 한다.
     private static void cleanup(myDbEnv env, XmlContainer openedContainer) {
         try {
             if(openedContainer != null)
@@ -70,67 +70,62 @@ public class retrieveDB {
         XmlTransaction txn = null;
 
         try {
-            // Open an environment
+            // environment 오픈
             env = new myDbEnv(path2DbEnv);
             XmlManager theMgr = env.getManager();
 
-            // Open a database in that environment
+            // 해당 environment에서 데이터베이스 오픈
             openedDatabase = new myDb(theDB, env.getEnvironment());
 
-            // Open a transactional container
+            // 트랜잭션 컨테이너 열기
             XmlContainerConfig config = new XmlContainerConfig();
             config.setTransactional(true);
             openedContainer = theMgr.openContainer(theContainer, config);
 
-            // Start a transaction via DB
+            // DB를 통해 트랜잭션 시작
             dbTxn = env.getEnvironment().beginTransaction(null, null);
             txn = theMgr.createTransaction();
 
-            // Obtain an XmlQueryContext with the result type set to
-            // values (not documents).
+            // 결과 형식이 값(도큐먼트 아님)으로 설정된 XmlQueryContext를 가져옴
             XmlQueryContext resultsContext = theMgr.createQueryContext();
 
             String theQuery = "distinct-values(collection('namespaceExampleData.dbxml')/vendor/salesrep/name)";
 
-            // Get all the vendor documents out of the container
+            // 컨테이너에서 모든 공급업체의 도큐먼트를 가져옴
             XmlResults results = theMgr.query(txn, theQuery, resultsContext);
             XmlValue value = results.next();
 
             while(value != null) {
 
-                // Pull the value out of the document query result set.
-                String theSalseRepkey = value.asString();
+                // 도큐먼트 쿼리 결과 집합에서 값을 추출
+                String theSalesRepKey = value.asString();
 
-                DatabaseEntry theKey = new DatabaseEntry(theSalseRepkey.getBytes());
+                DatabaseEntry theKey =
+                        new DatabaseEntry(theSalesRepKey.getBytes());
                 DatabaseEntry theData = new DatabaseEntry();
 
                 OperationStatus status = openedDatabase.getDatabase().get(txn.getTransaction(),
-                                                theKey, theData, null);
-                System.out.println("For key: " + theSalseRepkey +
-                            ", retrieved:");
+                        theKey, theData, null);
+                System.out.println("키: " + theSalesRepKey + ", 검색된 항목:");
                 if (status == OperationStatus.NOTFOUND) {
-                    System.out.println("key not found: run buildDB first");
-                } else {
-                    System.out.println(new String(theData.getData(), 0,
-                                        theData.getSize()));
-                    System.out.println("here");
-                    value = results.next();
-                }
-                results.delete();
-                txn.commit();
+                    System.out.println("키를 찾을 수 없음: buildDB를 먼저 실행하시오.");
+                } else
+                    System.out.println( new String(theData.getData(), 0, theData.getSize()));
+                System.out.println("-here-");
+                value = results.next();
             }
             results.delete();
             txn.commit();
-        } catch (XmlException xe) {
-            System.err.println("Xml error performing query against " + theContainer);
-            System.err.println("\tMessage: " + xe.toString());
-            if (txn != null) {
+        } catch (XmlException e) {
+            System.err.println(theContainer + "에 대해 쿼리를 수행하는 중 XML 오류발생.");
+            System.err.println("\t메시지: " + e.toString());
+            if ( txn != null ) {
                 txn.abort();
             }
-            throw xe;
+            throw e;
         } catch (DatabaseException de) {
-            System.err.println("Error performing query against " + theContainer);
-            System.err.println("\tMessage: " + de.toString());
+            System.err.println(theContainer + "에 대한 쿼리 수행중 오류발생.");
+            System.err.println("\t메시지: " + de.toString());
             if (txn != null) {
                 txn.abort();
             }

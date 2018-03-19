@@ -5,6 +5,7 @@ package gettingStarted;
  */
 
 import java.io.*;
+
 import com.sleepycat.dbxml.*;
 import com.sleepycat.db.*;
 import dbxml.gettingStarted.*;
@@ -100,8 +101,7 @@ public class buildDB {
                 // 다른 정보 비트와 같은 BLOB 이 포함된다. 이 경우 데이터를 검색할 때 무슨일이 일어나는지
                 // 알 수 있도록 설명 문자열을 넣을 것이다.
                 String theSalesRepData =
-                        "This is the data stored in the database for " +
-                        theSalesRepkey + ".";
+                        "이것은 " + theSalesRepkey + "의 데이터베이스에 저장된 데이터이다.";
 
                 DatabaseEntry theKey =
                         new DatabaseEntry(theSalesRepkey.getBytes());
@@ -109,8 +109,7 @@ public class buildDB {
                         new DatabaseEntry(theSalesRepData.getBytes());
 
                 // 마지막으로 Berkeley DB 에 실제 데이터를 쓴다.
-                openedDatabase.getDatabase();
-                putNoOverwrite(txn.getTransaction(), theKey, theData);
+                openedDatabase.getDatabase().putNoOverwrite(txn.getTransaction(), theKey, theData);
                 value = results.next();
             }
             results.delete();
