@@ -7,3 +7,7 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 ### retrieveDB.java
   
 Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법을 보여준다. 컨테이너에서 문서를 검색한 다음 각 문서에 해당하는 데이터를 Berkeley DB 데이터베이스에서 검색한다. 다시 말하지만 모든 쿼리는 공통 트랜잭션으로 래핑된다. 최상의 결과를 얻으려면 이 예제를 실행하기 전에 buildDB를 실행하시오.
+
+### BDB XML 명령어
+
+![help](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help.PNG)
