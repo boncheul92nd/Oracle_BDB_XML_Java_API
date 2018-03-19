@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2df3d2a-9b66-4945-9970-7663ce08ed7e" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/result/retrieveDBProto.java" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/environment/__db.001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/environment/__db.002" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/environment/__db.003" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/environment/editorContainerDB" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/environment/log.0000000001" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/environment/namespaceExampleData.dbxml" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/environment/simepleExampleData.dbxml" afterPath="" />
       <change type="DELETED" beforePath="$PROJECT_DIR$/environment/testBerkeleyDB" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environment/log.0000000001" afterPath="$PROJECT_DIR$/environment/log.0000000001" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/result/retrieveDBProto.java" afterPath="$PROJECT_DIR$/src/result/retrieveDBProto.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -67,8 +73,8 @@
       <file leaf-file-name="buildDBProto.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/result/buildDBProto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="62">
-              <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="180">
+              <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -79,8 +85,8 @@
       <file leaf-file-name="retrieveDBProto.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/result/retrieveDBProto.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+            <state relative-caret-position="323">
+              <caret line="102" column="40" lean-forward="true" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -810,8 +816,8 @@
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.retrieveDBProto" />
-        <item index="1" class="java.lang.String" itemvalue="Application.retrieveDB" />
-        <item index="2" class="java.lang.String" itemvalue="Application.buildDBProto" />
+        <item index="1" class="java.lang.String" itemvalue="Application.buildDBProto" />
+        <item index="2" class="java.lang.String" itemvalue="Application.retrieveDB" />
         <item index="3" class="java.lang.String" itemvalue="Application.buildDB" />
         <item index="4" class="java.lang.String" itemvalue="Application.exampleLoadContainer" />
       </list>
@@ -839,15 +845,16 @@
       <workItem from="1521088316010" duration="10257000" />
       <workItem from="1521101711149" duration="7744000" />
       <workItem from="1521177027251" duration="21762000" />
-      <workItem from="1521434774980" duration="6161000" />
+      <workItem from="1521434774980" duration="9252000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50295000" />
+    <option name="totallyTimeSpent" value="53386000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
@@ -859,12 +866,12 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32903227" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2463002" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4281184" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16302083" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.16302083" sideWeight="0.5" order="6" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32769555" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -872,7 +879,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.4503171" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26215646" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -896,16 +903,26 @@
           <option name="timeStamp" value="7" />
         </line-breakpoint>
       </breakpoints>
-      <option name="time" value="9" />
+      <option name="time" value="15" />
     </breakpoint-manager>
-    <watches-manager />
+    <watches-manager>
+      <configuration name="Application">
+        <watch expression="results.context.interrupt.this$0" />
+        <watch expression="results.context.interrupt.this$0" language="JAVA" />
+        <watch expression="((MS949)((StreamEncoder)((OutputStreamWriter)((BufferedWriter)((PrintStream)((XmlContainerConfig)((XmlManager)((XmlQueryContext)((XmlResults)((NodeValue)value.value).results).context).mgr).defaultConfig).messageStream).textOut).out).se).cs).aliases" custom="sun.nio.cs.StreamEncoder,com.sleepycat.dbxml.XmlResults,java.io.BufferedWriter,com.sleepycat.dbxml.XmlManager,com.sleepycat.dbxml.XmlValue.NodeValue,com.sleepycat.dbxml.XmlContainerConfig,com.sleepycat.dbxml.XmlQueryContext,sun.nio.cs.ext.MS949,java.io.OutputStreamWriter,java.io.PrintStream" />
+        <watch expression="((MS949)((StreamEncoder)((OutputStreamWriter)((BufferedWriter)((PrintStream)((XmlContainerConfig)((XmlManager)((XmlQueryContext)((XmlResults)((NodeValue)value.value).results).context).mgr).defaultConfig).messageStream).textOut).out).se).cs).aliases" language="JAVA" custom="sun.nio.cs.StreamEncoder,com.sleepycat.dbxml.XmlResults,java.io.BufferedWriter,com.sleepycat.dbxml.XmlManager,com.sleepycat.dbxml.XmlValue.NodeValue,com.sleepycat.dbxml.XmlContainerConfig,com.sleepycat.dbxml.XmlQueryContext,sun.nio.cs.ext.MS949,java.io.OutputStreamWriter,java.io.PrintStream" />
+        <watch expression="((XmlManager)((XmlQueryContext)((XmlResults)((XmlDocument)((NodeValue)value.value).document).results).context).mgr).defaultConfig" custom="com.sleepycat.dbxml.XmlQueryContext,com.sleepycat.dbxml.XmlDocument,com.sleepycat.dbxml.XmlResults,com.sleepycat.dbxml.XmlValue.NodeValue,com.sleepycat.dbxml.XmlManager" />
+        <watch expression="openedContainer" />
+        <watch expression="openedContainer" language="JAVA" />
+        <watch expression="openedContainer" language="JAVA" />
+      </configuration>
+    </watches-manager>
   </component>
   <component name="antWorkspaceConfiguration">
     <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/dbxml/gettingStarted/MyErrorHandler.java" />
     <entry file="file://$PROJECT_DIR$/src/dbxml/gettingStarted/MyErrorHandler.java" />
     <entry file="jar://C:/Program Files/Oracle/Berkeley DB XML 6.1.4/jar/db.jar!/com/sleepycat/db/Environment.class">
       <provider selected="true" editor-type-id="text-editor">
@@ -1212,8 +1229,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/result/buildDBProto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="62">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="180">
+          <caret line="10" column="30" lean-forward="true" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -1230,10 +1247,21 @@
         </state>
       </provider>
     </entry>
+    <entry file="jar://C:/Program Files/Oracle/Berkeley DB XML 6.1.4/jar/dbxml.jar!/com/sleepycat/dbxml/XmlResults.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="82" column="0" lean-forward="false" selection-start-line="82" selection-start-column="0" selection-end-line="82" selection-end-column="0" />
+          <folding>
+            <element signature="e#6914#6915#0" expanded="true" />
+            <element signature="e#6995#6996#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/result/retrieveDBProto.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="98" column="0" lean-forward="false" selection-start-line="98" selection-start-column="0" selection-end-line="98" selection-end-column="0" />
+        <state relative-caret-position="323">
+          <caret line="102" column="40" lean-forward="true" selection-start-line="102" selection-start-column="40" selection-end-line="102" selection-end-column="40" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

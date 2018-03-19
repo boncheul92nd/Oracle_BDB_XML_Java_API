@@ -90,7 +90,7 @@ public class retrieveDBProto {
             // 결과 형식이 값(도큐먼트 아님)으로 설정된 XmlQueryContext를 가져옴
             XmlQueryContext resultsContext = theMgr.createQueryContext();
 
-            String theQuery = "distinct-values(collection('editorContainer.dbxml'))";
+            String theQuery = "collection('editorContainer.dbxml')";
 
             // 컨테이너에서 도큐먼트를 가져옴
             XmlResults results = theMgr.query(txn, theQuery, resultsContext);
@@ -99,19 +99,8 @@ public class retrieveDBProto {
             while(value != null) {
 
                 // 도큐먼트 쿼리 결과 집합에서 값을 추출
-                String theResultKey = value.asString();
-
-                DatabaseEntry theKey = new DatabaseEntry(theResultKey.getBytes());
-                DatabaseEntry theData = new DatabaseEntry();
-                OperationStatus status = openedDatabase.getDatabase().get(txn.getTransaction(),
-                                                                    theKey, theData, null);
-                System.out.println("키: " + theResultKey + ", 검색된 항목: ");
-                if(status == OperationStatus.NOTFOUND) {
-                    System.out.println("키를 찾을 수 없음: builDBProto를 먼저 실행하시오/");
-                } else {
-                    System.out.println(new String(theData.getData(), 0, theData.getSize()));
-                    System.out.println("here");
-                }
+                String doc = value.getLocalName();
+                System.out.println(doc);
                 value = results.next();
             }
             results.delete();
