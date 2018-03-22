@@ -99,7 +99,7 @@ public class retrieveDBProto {
             while(value != null) {
 
                 // 도큐먼트 쿼리 결과 집합에서 값을 추출
-                String doc = value.getLocalName();
+                String doc = value.asString();
                 System.out.println(doc);
                 value = results.next();
             }
