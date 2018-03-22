@@ -70,7 +70,6 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 
 ![help_openContainer](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help_openContainer.PNG)
 
-```
 `openContainer` -- 컨테이너를 열고 기본 컨테이너로 사용
 
 `Usage: openContainer <container> [[no]validate]`
@@ -78,13 +77,12 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 이 명령은 `XmlManager::openContainer()`메소드를 사용한다.
 
 또한 `XmlQueryContext::setDefaultCollection()`메소드를 사용하여 기본 컬렉션을 설정한다.
-```
+
 
 ### help print
 
 ![help_print](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help_print.PNG)
 
-```
 `print` -- 가장 최근의 결과를 출력 선택적으로는 파일에 출력
 
 `Usage: print | printNames [n <number>] [pathToFile]`
@@ -97,4 +95,4 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 선택적 `n` 매개변수에 숫자가 지정되면 지정된 수의 결과만 출력된다.
 
 선택적 `pathToFile` 매개변수에 특정 파일이 지정되면 출력은 stdout이 아닌 명명된 파일에 기록된다.
-```
+
