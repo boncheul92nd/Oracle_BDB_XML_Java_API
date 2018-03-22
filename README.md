@@ -66,3 +66,6 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 |`upgradeContainer`|컨테이너를 현재 컨테이너 형식으로 업그레이드|
 |`verifyContainer`|현재 컨테이너 형식으로 컨테이너 확인|
 
+### print help
+
+![print_help](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help_print.PNG)
