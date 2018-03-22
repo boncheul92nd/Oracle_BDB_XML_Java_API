@@ -86,15 +86,15 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 
 ![help_getDocuments](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help_getDocuments.PNG)
 
-getDocument -- 기본 컨테이너에서 이름으로 문서를 가져온다.
+`getDocument` -- 기본 컨테이너에서 이름으로 문서를 가져온다.
 
-Usage: getDocuments [<docName>]
+Usage: `getDocuments [<docName>]`
 
-docName이 설정된 경우 해당 도큐먼트를 기본컨테이너에서 조회한다.
+`docName`이 설정된 경우 해당 도큐먼트를 기본컨테이너에서 조회한다.
 
 인수를 사용하지 않은 경우 컨테이너 내의 모든 문서가 조회되며 결과에 배치된다. 
 
-결과 문서 이름과 내용은 "print"명령을 통해 출력가능하다.
+결과 문서 이름과 내용은 `print`명령을 통해 출력가능하다.
 
 ### help print
 
