@@ -68,6 +68,8 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 
 ### help openContainer
 
+***
+
 ![help_openContainer](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help_openContainer.PNG)
 
 `openContainer` -- 컨테이너를 열고 기본 컨테이너로 사용
@@ -80,6 +82,8 @@ Berkeley DB 데이터베이스에서 DBXML 컨테이너를 사용하는 방법�
 
 
 ### help print
+
+***
 
 ![help_print](https://github.com/boncheul92nd/Oracle_BDB_XML_Java_API/blob/master/img/help_print.PNG)
 
