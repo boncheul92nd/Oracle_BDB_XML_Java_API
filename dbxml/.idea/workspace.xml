@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="a2df3d2a-9b66-4945-9970-7663ce08ed7e" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/environment/log.0000000001" afterPath="$PROJECT_DIR$/environment/log.0000000001" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/result/retrieveDBProto.java" afterPath="$PROJECT_DIR$/src/result/retrieveDBProto.java" />
-    </list>
+    <list default="true" id="a2df3d2a-9b66-4945-9970-7663ce08ed7e" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -796,12 +792,12 @@
       <workItem from="1521434774980" duration="9844000" />
       <workItem from="1521547963779" duration="1223000" />
       <workItem from="1521694827422" duration="1551000" />
-      <workItem from="1521705857512" duration="4179000" />
+      <workItem from="1521705857512" duration="4308000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60931000" />
+    <option name="totallyTimeSpent" value="61060000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
