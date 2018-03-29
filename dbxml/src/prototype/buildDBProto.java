@@ -1,4 +1,4 @@
-package result;
+package prototype;
 
 /**
  * Created by USER on 2018-03-19.
@@ -12,8 +12,9 @@ import dbxml.gettingStarted.*;
 
 public class buildDBProto {
 
-    private static String theContainer = "editorContainer.dbxml";
-    private static String theDB = "editorContainerDB";
+    private static String name = "commentContainer";
+    private static String theContainer = name + ".dbxml";
+    private static String theDB = name+"DB";
 
     private static void usage() {
         String usageMessage = "이 프로그램은 DB XML 컨테이너에 저장된 XML 문서의 특정 집합에서 노드 정보를 검색한 다음, 관련 샘플 데이터를 Berkeley DB 데이터베이스에 저장한다.\n";

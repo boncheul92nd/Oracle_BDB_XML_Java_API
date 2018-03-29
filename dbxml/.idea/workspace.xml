@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a2df3d2a-9b66-4945-9970-7663ce08ed7e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/basic/HelloWorld.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/basic/HelloWorldTxn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/basic/Query.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/basic/QueryTxn.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/gettingStarted/buildDB.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/gettingStarted/exampleLoadContainer.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/out/production/dbxml/gettingStarted/retrieveDB.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/result/buildDBProto.java" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/src/result/retrieveDBProto.java" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/gettingStarted/exampleLoadContainer.java" afterPath="$PROJECT_DIR$/src/gettingStarted/exampleLoadContainer.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -726,12 +722,12 @@
       <workItem from="1521547963779" duration="1223000" />
       <workItem from="1521694827422" duration="1551000" />
       <workItem from="1521705857512" duration="4308000" />
-      <workItem from="1522332635709" duration="34000" />
+      <workItem from="1522332635709" duration="163000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="61094000" />
+    <option name="totallyTimeSpent" value="61223000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -1103,9 +1099,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="18">
           <caret line="10" column="30" lean-forward="false" selection-start-line="10" selection-start-column="30" selection-end-line="10" selection-end-column="30" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>

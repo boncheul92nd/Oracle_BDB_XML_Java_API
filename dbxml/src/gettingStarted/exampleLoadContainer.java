@@ -73,7 +73,7 @@ public class exampleLoadContainer {
 
         // 네임스페이스를 사용하지 않는 XML 예제 데이터에 대해 반복
         getXmlFiles(simpleData, files2add);
-        loadXmlFiles(path2DbEnv, "simepleExampleData.dbxml", files2add);
+        loadXmlFiles(path2DbEnv, "simpleExampleData.dbxml", files2add);
     }
 
     // -p 가 존재하는 디랙토리를 가리키는지 확인하는 편리한 메소드

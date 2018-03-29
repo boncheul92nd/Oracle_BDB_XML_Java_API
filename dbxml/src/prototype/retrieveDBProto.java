@@ -1,4 +1,4 @@
-package result;
+package prototype;
 
 /**
  * Created by USER on 2018-03-19.
@@ -8,11 +8,16 @@ import java.io.*;
 import com.sleepycat.dbxml.*;
 import com.sleepycat.db.*;
 import dbxml.gettingStarted.*;
+import java.util.regex.Pattern;
+import java.util.regex.Matcher;
+
+
 
 public class retrieveDBProto {
 
-    private static String theContainer = "editorContainer.dbxml";
-    private static String theDB = "editorContainerDB";
+    private static String name = "wordContainer";
+    private static String theContainer = name + ".dbxml";
+    private static String theDB = name+"DB";
 
     private static void usage() {
         String usageMessage = "이 프로그램은 DB XML 컨테이너의 문서에서 검색된 정보를 기반으로 Berkeley DB 데이터베이스에서 데이터를 검색한다.\n";
@@ -90,17 +95,36 @@ public class retrieveDBProto {
             // 결과 형식이 값(도큐먼트 아님)으로 설정된 XmlQueryContext를 가져옴
             XmlQueryContext resultsContext = theMgr.createQueryContext();
 
-            String theQuery = "collection('editorContainer.dbxml')";
+            String theQuery = "collection(\"" + theContainer + "\")/Word/Progress[../Progress=\"최종감수완료\"]";
 
             // 컨테이너에서 도큐먼트를 가져옴
             XmlResults results = theMgr.query(txn, theQuery, resultsContext);
             XmlValue value = results.next();
 
+            int i = 1;
             while(value != null) {
 
+                // XML code beautifier
+                XmlFormatter xmlFormatter = new XmlFormatter();
+
                 // 도큐먼트 쿼리 결과 집합에서 값을 추출
-                String doc = value.asString();
-                System.out.println(doc);
+                XmlDocument doc = value.asDocument();
+                String docName = doc.getName();
+
+                // beautifying
+                String content = xmlFormatter.format(doc.getContentAsString());
+
+                // 도큐먼트명이 파일명으로 유효하지 않은 경우
+                Pattern p = Pattern.compile("[^\\|/|:|*|?|\"|<|>|||]");
+                Matcher m = p.matcher(docName);
+                if(!m.find()) {
+                    docName = "invaliedFilename";
+                }
+
+                FileOutputStream output = new FileOutputStream("./xmlData/wordData/"+ docName + ".xml");
+                output.write(content.getBytes());
+                output.close();
+
                 value = results.next();
             }
             results.delete();
@@ -124,6 +148,7 @@ public class retrieveDBProto {
             if(openedDatabase != null)
                 openedDatabase.cleanup();
             cleanup(env, openedContainer);
+
         }
     }
 }
